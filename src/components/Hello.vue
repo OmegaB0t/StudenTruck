@@ -24,7 +24,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue FLORENTIN.js PWA'
+      msg: 'Welcome to Your Vue FLORENTI.js PWA'
     }
   }
 }
