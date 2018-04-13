@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import Connexion from '@/components/Connexion'
+import Inscription from '@/components/Inscription'
 import FoodtruckList from '@/components/FoodtruckList'
 import FoodtruckDetails from '@/components/FoodtruckDetails'
 import Inscription from '@/components/Inscription'
@@ -23,7 +24,11 @@ export default new Router({
     },
     {
       path: '/inscription',
+<<<<<<< HEAD
       name: 'inscription',
+=======
+      name: 'Inscription',
+>>>>>>> Modification de la page de connexion
       component: Inscription
     },
     {
