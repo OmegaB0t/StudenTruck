@@ -1,52 +1,93 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="http://chat.vuejs.org/" target="_blank" rel="noopener">Vue Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank" rel="noopener">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div id="container">
+    <div id="connectionCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
+      <div id="topCardTitle" class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Connexion</h2>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <form name="connexionForm" id="connexionForm" action="/Hello" onsubmit="return validateForm()" method="post">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" name="mail" type="text" id="mail">
+            <label class="mdl-textfield__label" for="mail">Email</label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="password" id="password">  
+            <label class="mdl-textfield__label" for="password">Password</label>
+          </div>
+          <div id="connexionInscription">
+            <button id="submitButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Connexion </button>
+            <p> Pas encore inscrit ? <a href="#"> cliquez ici ! </a> </p>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+
+const $ = require('jquery')
+
 export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue FLORENTI.js PWA'
+      msg: 'Ceci est la page de connexion'
     }
+  },
+  mounted: function() {
+    $(document).ready(function(){
+      
+      $('#submitButton').on('click', function(e){
+     
+        var userInputMail = $("#mail").val();
+        var mailRegex = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");  
+        
+        var wrongMail = (userInputMail == "" || !mailRegex.test(userInputMail));
+        
+        if(wrongMail) {
+          e.preventDefault();
+          alert("Rentrez un mail valide !");
+        }
+      });
+    });
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-h1, h2 {
-  font-weight: normal;
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+#connectionCard {
+  min-width: 300px;
+  width: auto;
+  max-width: 550px;
+  height: auto;
+  padding-bottom: 15px;
 }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
+#connexionInscription button, p {
+  margin: 10px;
 }
 
-a {
-  color: #35495E;
+#topCardTitle h2 {
+  color: balck;
+      text-shadow: 0px 0px 1px white;
 }
+
+#topCardTitle {
+  padding:10px;
+  background: url(../assets/MaterialBackground.png);
+  background-image: url(../assets/MaterialBackground.png);
+  background-size: cover;
+
+
+}
+
 </style>
