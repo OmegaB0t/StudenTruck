@@ -80,4 +80,8 @@ export default {
   .foodTruckDetailsMenuPrix{
     font-size: 18px;
   }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> detail menus des foodTruck
