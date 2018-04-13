@@ -16,12 +16,16 @@
 =======
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">CropChat</span>
+        <span class="mdl-layout-title">StudenTruck</span>
       </div>
     </header>
     <div class="mdl-layout__drawer">
+<<<<<<< HEAD
       <span class="mdl-layout-title">CropChat</span>
 >>>>>>> added foodtrucklist and detail template with sidemenu
+=======
+      <span class="mdl-layout-title">Menu</span>
+>>>>>>> fgrtg
       <nav class="mdl-navigation">
         <router-link class="mdl-navigation__link" to="/" @click.native="hideMenu">Home</router-link>
         <router-link class="mdl-navigation__link" to="/foodtruckList" @click.native="hideMenu">FoodtruckList</router-link>
