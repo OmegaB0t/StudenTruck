@@ -2,6 +2,7 @@
   <div id="app">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
@@ -14,11 +15,17 @@
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">Menu</span>
 =======
+=======
+
+>>>>>>> changes to listeFoodtruck
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
         <span class="mdl-layout-title">StudenTruck</span>
+        <div class="mdl-layout-spacer"></div>
+        <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="1">turned_in</div>
       </div>
     </header>
+
     <div class="mdl-layout__drawer">
 <<<<<<< HEAD
       <span class="mdl-layout-title">CropChat</span>
@@ -32,9 +39,13 @@
       </nav>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 >>>>>>> added foodtrucklist and detail template with sidemenu
+=======
+  
+>>>>>>> changes to listeFoodtruck
     <main class="mdl-layout__content">
       <div class="page-content">
         <router-view></router-view>
