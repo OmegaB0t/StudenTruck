@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<<<<<<< HEAD
 
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
@@ -12,12 +13,24 @@
 
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">Menu</span>
+=======
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">CropChat</span>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">CropChat</span>
+>>>>>>> added foodtrucklist and detail template with sidemenu
       <nav class="mdl-navigation">
         <router-link class="mdl-navigation__link" to="/" @click.native="hideMenu">Home</router-link>
         <router-link class="mdl-navigation__link" to="/foodtruckList" @click.native="hideMenu">FoodtruckList</router-link>
       </nav>
     </div>
+<<<<<<< HEAD
   
+=======
+>>>>>>> added foodtrucklist and detail template with sidemenu
     <main class="mdl-layout__content">
       <div class="page-content">
         <router-view></router-view>
