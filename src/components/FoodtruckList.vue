@@ -3,6 +3,9 @@
     <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+        <i class="material-icons">keyboard_arrow_left</i>
+        <div id="date"></div>
+        <i class="material-icons">keyboard_arrow_right</i>
         <div v-for="picture in this.pictures" v-bind:key="picture.id" class="image-card" @click="displayDetails(picture.id)">
           <div class="image-card__picture">
             <img :src="picture.url" />
@@ -35,6 +38,14 @@
       }
     }
   }
+  // document.onload(function () {
+  //   console.log('ok')
+  //   let date = new Date()
+  //   date = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate())
+  //   date.setUTCHours(date.getUTCHours() + '07')
+  //   let poop = document.getElementById('date')
+  //   poop.innerHTML(date)
+  // })
 </script>
 <style scoped>
   .add-picture-button {
