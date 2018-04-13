@@ -1,11 +1,15 @@
 <template>
   <div id="app">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
         <span class="mdl-layout-title">StudenTruck</span>
+        <div class="mdl-layout-spacer"></div>
+        <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="1">turned_in</div>
       </div>
     </header>
+
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">Menu</span>
       <nav class="mdl-navigation">
@@ -13,6 +17,7 @@
         <router-link class="mdl-navigation__link" to="/foodtruckList" @click.native="hideMenu">FoodtruckList</router-link>
       </nav>
     </div>
+  
     <main class="mdl-layout__content">
       <div class="page-content">
         <router-view></router-view>
@@ -46,6 +51,7 @@ body {
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
@@ -53,7 +59,7 @@ body {
 
 main {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 0px;
 }
 
 header {
@@ -73,5 +79,10 @@ header span {
   font-weight: 400;
   box-sizing: border-box;
   padding-top: 16px;
+}
+
+.mdl-layout-title {
+  margin-bottom: 10px;
+  font-size: 22px;
 }
 </style>
