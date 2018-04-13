@@ -52,6 +52,7 @@ git push origin LaBrancheActuelle
 
 # push forcé, à faire si message du type "branche courante derrière la branche...", seulement sur la branche ou on est, surtout pas master !
 git push -f origin master
+git pull origin master --allow-unrelated-histories
 
 # ajouter un fichier au projet
 git add "path/to/file.xyz"

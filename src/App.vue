@@ -38,6 +38,7 @@ export default {
     }
   }
 }
+const $ = require('jquery')
 </script>
 
 <style>
