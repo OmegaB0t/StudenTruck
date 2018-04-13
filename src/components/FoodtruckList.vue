@@ -25,6 +25,7 @@
   export default {
     methods: {
       displayDetails (id) {
+        alert(id)
         this.$router.push({name: 'FoodtruckDetails', params: { id: id }})
       }
     },
@@ -57,10 +58,8 @@
     text-align: left;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
-  }
-  .image-card__comment > span {
-    color: #fff;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
   }
+
 </style>
