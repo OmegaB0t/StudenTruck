@@ -14,6 +14,7 @@
 export default {
   name: 'app'
 }
+const $ = require('jquery')
 </script>
 
 <style>
