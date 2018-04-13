@@ -26,7 +26,7 @@ export default new Router({
       component: FoodtruckList
     },
     {
-      path: '/foodtruckDetails',
+      path: '/foodtruckDetails/:id',
       name: 'FoodtruckDetails',
       component: FoodtruckDetails
     }
