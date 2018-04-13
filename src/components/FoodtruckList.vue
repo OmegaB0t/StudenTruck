@@ -7,15 +7,17 @@
           <div class="image-card__picture">
             <img :src="picture.url" />
           </div>
-          <div class="image-card__comment mdl-card__actions">
-            <span>{{ picture.comment }}</span>
+          <div class="mdl-grid image-card__comment mdl-card__actions">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone">
+              <span>{{ picture.name }}</span>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone">
+              <span>Commandes : {{ picture.commandes }}/{{ picture.minCommandes }}</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <router-link class="add-picture-button mdl-button mdl-js-button mdl-button--fab mdl-button--colored" to="/post">
-    <i class="material-icons">add</i>
-    </router-link>
   </div>
 </template>
 <script>
@@ -52,8 +54,9 @@
     bottom: 0;
     height: 52px;
     padding: 16px;
-    text-align: right;
+    text-align: left;
     background: rgba(0, 0, 0, 0.5);
+    color: #fff;
   }
   .image-card__comment > span {
     color: #fff;

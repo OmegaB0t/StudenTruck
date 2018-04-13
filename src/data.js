@@ -3,32 +3,35 @@ export default {
     {
       'id': 0,
       'url': 'https://25.media.tumblr.com/tumblr_m40h4ksiUa1qbyxr0o1_400.gif',
-      'comment': 'A cat game',
-      'info': 'Posted by Kevin on Friday'
-    },
-    {
-      'id': 1,
-      'url': 'https://25.media.tumblr.com/tumblr_lhd7n9Qec01qgnva2o1_500.jpg',
-      'comment': 'Tatoo & cat',
-      'info': 'Posted by Charles on Tuesday'
-    },
-    {
-      'id': 2,
-      'url': 'https://24.media.tumblr.com/tumblr_m4j2atctRm1qejbiro1_1280.jpg',
-      'comment': 'Santa cat',
-      'info': 'Posted by Richard on Monday'
+      'name': 'foodtruck 1',
+      'minCommandes': 30,
+      'commandes': 17,
+      'info': 'Posted by Kevin on Friday',
+      'menus': [{
+        'id': 1,
+        'url': 'https://25.media.tumblr.com/tumblr_lhd7n9Qec01qgnva2o1_500.jpg',
+        'intitule': 'Tatoo & cat',
+        'prix': 7
+      }, {
+        'id': 2,
+        'url': 'https://24.media.tumblr.com/tumblr_m4j2atctRm1qejbiro1_1280.jpg',
+        'intitule': 'Santa cat',
+        'prix': 8.5
+      }]
     },
     {
       'id': 3,
       'url': 'https://25.media.tumblr.com/tumblr_m3rmbwhVB51qhwmnpo1_1280.jpg',
-      'comment': 'Mexico cat',
-      'info': 'Posted by Richard on Monday'
-    },
-    {
-      'id': 4,
-      'url': 'https://24.media.tumblr.com/tumblr_mceknxs4Lo1qd477zo1_500.jpg',
-      'comment': 'Curious cat',
-      'info': 'Posted by Richard on Monday'
+      'name': 'Mexico cat',
+      'minCommandes': 15,
+      'commandes': 15,
+      'info': 'Posted by Richard on Monday',
+      'menus': [{
+        'id': 4,
+        'url': 'https://24.media.tumblr.com/tumblr_mceknxs4Lo1qd477zo1_500.jpg',
+        'intitule': 'Curious cat',
+        'prix': 10.5
+      }]
     }
   ]
 }
