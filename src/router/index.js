@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import Connexion from '@/components/Connexion'
+import Inscription from '@/components/Inscription'
 import FoodtruckList from '@/components/FoodtruckList'
 import FoodtruckDetails from '@/components/FoodtruckDetails'
 
@@ -19,6 +20,11 @@ export default new Router({
       path: '/connexion',
       name: 'Connexion',
       component: Connexion
+    },
+    {
+      path: '/inscription',
+      name: 'Inscription',
+      component: Inscription
     },
     {
       path: '/foodtruckList',
