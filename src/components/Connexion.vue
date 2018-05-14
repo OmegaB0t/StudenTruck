@@ -16,6 +16,7 @@
           </div>
           <div id="connexionInscription">
             <button id="submitButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Connexion </button>
+            <p><a href="/ForgotPassword"> J'ai oublié mon mot de passe ? </a> </p>
             <p> Pas encore inscrit ? <a href="/Inscription"> cliquez ici ! </a> </p>
           </div>
         </form>
