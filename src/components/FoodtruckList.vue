@@ -10,12 +10,19 @@
           <div class="image-card__picture">
             <img :src="picture.url" />
           </div>
-          <div class="mdl-grid image-card__comment mdl-card__actions">
-            <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone">
+          <div class="mdl-grid image-card__title mdl-card__actions">
+            <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
               <span>{{ picture.name }}</span>
             </div>
+          </div>
+          <div class="mdl-grid image-card__comment mdl-card__actions">
             <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone">
-              <span>Commandes : {{ picture.commandes }}/{{ picture.minCommandes }}</span>
+              <img class="icon" src="../assets/clock-circular-outline.png">
+              <span>{{ picture.heure }}</span>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone">
+              <img class="icon" src="../assets/cart.png">
+              <span>{{ picture.commandes }}/{{ picture.minCommandes }}</span>
             </div>
           </div>
         </div>
@@ -65,10 +72,25 @@
     height: 52px;
     padding: 16px;
     text-align: left;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0);
     color: #fff;
     font-size: 12px;
     font-weight: bold;
+  }
+  .image-card__title {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    padding: 0px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .icon {
+    width: 16px;
+    height: 16px;
   }
 
 </style>
