@@ -8,15 +8,16 @@
         <form name="connexionForm" id="connexionForm" action="/Hello" onsubmit="return validateForm()" method="post">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" name="mail" type="text" id="mail">
-            <label class="mdl-textfield__label" for="mail">Email</label>
+            <label id="labelForMail" class="mdl-textfield__label" for="mail">Email</label>
           </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" type="password" id="password">  
-            <label class="mdl-textfield__label" for="password">Password</label>
+            <label id="labelForPassword" class="mdl-textfield__label" for="password">Password</label>
           </div>
           <div id="connexionInscription">
             <button id="submitButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Connexion </button>
-            <p> Pas encore inscrit ? <a href="#"> cliquez ici ! </a> </p>
+            <p><a href="/ForgotPassword"> J'ai oublié mon mot de passe ? </a> </p>
+            <p> Pas encore inscrit ? <a href="/Inscription"> cliquez ici ! </a> </p>
           </div>
         </form>
       </div>
@@ -40,14 +41,20 @@ export default {
       
       $('#submitButton').on('click', function(e){
      
-        var userInputMail = $("#mail").val();
+        var userInputMail = $("#mail");
+        var userInputPassword = $("#password");
+
         var mailRegex = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");  
         
-        var wrongMail = (userInputMail == "" || !mailRegex.test(userInputMail));
-        
+        var wrongMail = (userInputMail.val() == "" || !mailRegex.test(userInputMail.val()));
+
         if(wrongMail) {
           e.preventDefault();
           alert("Rentrez un mail valide !");
+        }
+        if (userInputPassword.val().length < 8) {
+          e.preventDefault();
+          alert("Votre mot de passe doit faire au moins 8 caractères");
         }
       });
     });
@@ -86,8 +93,6 @@ export default {
   background: url(../assets/MaterialBackground.png);
   background-image: url(../assets/MaterialBackground.png);
   background-size: cover;
-
-
 }
 
 </style>
