@@ -28,7 +28,6 @@
   export default {
     methods: {
       displayDetails (id) {
-        alert(id)
         this.$router.push({name: 'FoodtruckDetails', params: { id: id }})
       }
     },
@@ -36,16 +35,15 @@
       return {
         'pictures': data.pictures
       }
+    },
+    mounted : function() {
+      let date = new Date()
+      date = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDay())
+      let container = document.getElementById('date')
+      container.innerHTML = date.getUTCDay() + "/" + date.getUTCMonth() + "/" + date.getUTCFullYear()
     }
   }
-  // document.onload(function () {
-  //   console.log('ok')
-  //   let date = new Date()
-  //   date = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate())
-  //   date.setUTCHours(date.getUTCHours() + '07')
-  //   let poop = document.getElementById('date')
-  //   poop.innerHTML(date)
-  // })
+
 </script>
 <style scoped>
   .add-picture-button {
