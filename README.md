@@ -45,7 +45,7 @@ git stash pop
 git pull --rebase origin LaBrancheActuelle
 
 # faire un commit
-git commit "nomducommit"
+git commit -m "nomducommit"
 
 # push (nécéssite un commit d'abord)
 git push origin LaBrancheActuelle
