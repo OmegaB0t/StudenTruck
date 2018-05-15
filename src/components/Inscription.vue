@@ -80,15 +80,24 @@ export default {
 <style>
 
 #container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        position: relative;
+        top: 10vh;
+        width:50%;
+        margin: auto;
+    }
+
+@media screen and (max-width: 600px) {
+    #container {
+        position: relative;
+        top: 10vh;
+        width: 100%;
+        margin: auto;
+    }
 }
 
 #connectionCard {
     min-width: 300px;
     width: auto;
-    max-width: 550px;
     height: auto;
     padding-bottom: 15px;
 }
