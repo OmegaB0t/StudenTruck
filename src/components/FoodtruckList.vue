@@ -4,7 +4,7 @@
       <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
         <i class="material-icons">keyboard_arrow_left</i>
-        <div id="date"></div>
+        <datepicker id="datepicker" :language="languages[language]" format="dd/M/yyyy" placeholder="Date" value=""></datepicker>
         <i class="material-icons">keyboard_arrow_right</i>
         <div v-for="picture in this.pictures" v-bind:key="picture.id" class="image-card" @click="displayDetails(picture.id)">
           <div class="image-card__picture">
@@ -32,6 +32,12 @@
 </template>
 <script>
   import data from '../data'
+  import Datepicker from 'vuejs-datepicker'
+  import * as lang from 'vuejs-datepicker/src/locale'
+
+  let ladate = new Date()
+  let aujourdhui = ladate.getDate()+"/"+(ladate.getMonth()+1)+"/"+ladate.getFullYear()
+
   export default {
     methods: {
       displayDetails (id) {
@@ -40,17 +46,19 @@
     },
     data () {
       return {
-        'pictures': data.pictures
+        'pictures': data.pictures,
+        language: "fr",
+        languages: lang,
       }
     },
-    mounted : function() {
-      let date = new Date()
-      date = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDay())
-      let container = document.getElementById('date')
-      container.innerHTML = date.getUTCDay() + "/" + date.getUTCMonth() + "/" + date.getUTCFullYear()
+    mounted () {
+      document.getElementById("datepicker").setAttribute("value", aujourdhui);
+    },
+    components: {
+      Datepicker
     }
   }
-
+  
 </script>
 <style scoped>
   .add-picture-button {
