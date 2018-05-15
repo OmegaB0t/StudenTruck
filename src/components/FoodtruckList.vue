@@ -71,7 +71,7 @@
     bottom: 0;
     height: 52px;
     padding: 16px;
-    text-align: left;
+    text-align: center;
     background: rgba(0, 0, 0, 0);
     color: #fff;
     font-size: 12px;

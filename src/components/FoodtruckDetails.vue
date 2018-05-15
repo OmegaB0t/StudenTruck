@@ -1,12 +1,17 @@
 <template>
   <div>
     <div class="picture">
+      <div class="buttonReturn mdl-cell mdl-cell--6-col mdl-cell--4-tablet mdl-cell--2-col-phone">
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+          <i class="material-icons buttonReturnText" @click="returnList()">keyboard_backspace</i>
+        </button>
+      </div>
       <img :src="this.picture.find(function(a){return a.id == $route.params.id}).url" />
     </div>
+    <div class="info">
+      <span>{{ this.picture.find(function(a){return a.id == $route.params.id}).info }}</span>
+    </div>
     <div class="mdl-grid">
-      <div class="info">
-        <span>{{ this.picture.find(function(a){return a.id == $route.params.id}).info }}</span>
-      </div>
       <div v-for="menu in this.picture.find(function(a){return a.id == $route.params.id}).menus" v-bind:key="menu.id" class="image-card">
         <span class='foodTruckDetailsMenuIntitule'>
           <i class="material-icons">local_dining</i> {{ menu.intitule }}
@@ -15,16 +20,16 @@
         <span class='foodTruckDetailsMenuDesc'>
           {{ menu.description }}
         </span>
-        <div class="picture">
-          <img :src="menu.url" />
+        <div class="imgMenuParent">
+          <img class="imgMenu" :src="menu.url" />
         </div>
         <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--9-col mdl-cell--3-col-phone">
+          <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-cell--3-col-phone">
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-card__actions">
               COMMANDER
             </button>
           </div>
-          <div class="foodTruckDetailsMenuPrix mdl-cell mdl-cell--3-col mdl-cell--1-col-phone">
+          <div class="foodTruckDetailsMenuPrix mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
             {{ menu.prix }} $
           </div>
         </div>
@@ -37,7 +42,12 @@
 <script>
 import data from '../data'
 export default {
-  // props: ['id'],
+  // props: ['id']
+  methods: {
+    returnList () {
+      this.$router.push({name: 'FoodtruckList'})
+    }
+  },
   data () {
     return {
       'picture': data.pictures // .find(this.props.id)
@@ -50,8 +60,8 @@ export default {
     text-align: left;
   }
   .picture > img {
-    color: #fff;
     width:100%;
+    display: block;
   }
   .info {
     text-align: right;
@@ -73,6 +83,9 @@ export default {
     min-height: 30px;
     height: 30px;
   }
+  .image-card{
+    width:100%;
+  }
   .foodTruckDetailsMenuIntitule{
     font-size: 20px;
     font-weight: bold;
@@ -80,4 +93,23 @@ export default {
   .foodTruckDetailsMenuPrix{
     font-size: 18px;
   }
+  .buttonReturn{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .imgMenu{
+    max-height: 300px;
+    max-width: 100%;
+    width: auto;
+  }
+  .imgMenuParent{
+    text-align: center;
+    width: 100%;
+  }
+  .buttonReturnText{
+    vertical-align: 0%;
+  }
+
 </style>
