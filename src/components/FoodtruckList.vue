@@ -29,7 +29,7 @@
       </div>
     </div>
   </div>
-</template>
+</template>  constant.colors.grey
 <script>
   import data from '../data'
   import constant from '../utils/constant'
