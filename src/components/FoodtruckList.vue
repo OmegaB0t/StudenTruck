@@ -29,16 +29,12 @@
       </div>
     </div>
   </div>
-</template>
+</template>  constant.colors.grey
 <script>
   import data from '../data'
-  let ladate = new Date()
-  if (ladate.getMonth()+1 < 10) {
-
-  }
-  let aujourdhui = ladate.getDate()+"-"+ (((ladate.getMonth()+1) < 10) ? "0"+(ladate.getMonth()+1) : (ladate.getMonth()+1)) +"-"+ladate.getFullYear()
-  
-
+  import constant from '../utils/constant'
+  let date = new Date()
+  let today = date.getFullYear()+"-"+ (((date.getMonth()+1) < 10) ? "0"+(date.getMonth()+1) : (date.getMonth()+1)) +"-"+date.getDate()
   export default {
     methods: {
       displayDetails (id) {
@@ -51,8 +47,7 @@
       }
     },
     mounted () {
-      document.getElementById("date").setAttribute("value", aujourdhui);
-      console.log(document.getElementById("date").getAttribute("value"))
+      document.getElementById("date").setAttribute("value", today);
     }
   }
   
