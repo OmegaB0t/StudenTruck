@@ -111,5 +111,4 @@ export default {
   .buttonReturnText{
     vertical-align: 0%;
   }
-
 </style>
