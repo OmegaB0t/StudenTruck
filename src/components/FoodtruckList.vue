@@ -4,7 +4,7 @@
       <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
         <i class="material-icons">keyboard_arrow_left</i>
-        <input id="date" type="date">
+        <input id="date" type="date" value="">
         <i class="material-icons">keyboard_arrow_right</i>
         <div v-for="picture in this.pictures" v-bind:key="picture.id" class="image-card" @click="displayDetails(picture.id)">
           <div class="image-card__picture">
@@ -33,7 +33,11 @@
 <script>
   import data from '../data'
   let ladate = new Date()
-  let aujourdhui = ladate.getDate()+"/"+(ladate.getMonth()+1)+"/"+ladate.getFullYear()
+  if (ladate.getMonth()+1 < 10) {
+
+  }
+  let aujourdhui = ladate.getDate()+"-"+ (((ladate.getMonth()+1) < 10) ? "0"+(ladate.getMonth()+1) : (ladate.getMonth()+1)) +"-"+ladate.getFullYear()
+  
 
   export default {
     methods: {
@@ -44,11 +48,11 @@
     data () {
       return {
         'pictures': data.pictures,
-
       }
     },
     mounted () {
       document.getElementById("date").setAttribute("value", aujourdhui);
+      console.log(document.getElementById("date").getAttribute("value"))
     }
   }
   
