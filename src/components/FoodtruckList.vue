@@ -4,7 +4,7 @@
       <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
         <i class="material-icons">keyboard_arrow_left</i>
-        <datepicker id="datepicker" :language="languages[language]" format="dd/M/yyyy" placeholder="Date" value=""></datepicker>
+        <input id="date" type="date">
         <i class="material-icons">keyboard_arrow_right</i>
         <div v-for="picture in this.pictures" v-bind:key="picture.id" class="image-card" @click="displayDetails(picture.id)">
           <div class="image-card__picture">
@@ -32,9 +32,6 @@
 </template>
 <script>
   import data from '../data'
-  import Datepicker from 'vuejs-datepicker'
-  import * as lang from 'vuejs-datepicker/src/locale'
-
   let ladate = new Date()
   let aujourdhui = ladate.getDate()+"/"+(ladate.getMonth()+1)+"/"+ladate.getFullYear()
 
@@ -47,15 +44,11 @@
     data () {
       return {
         'pictures': data.pictures,
-        language: "fr",
-        languages: lang,
+
       }
     },
     mounted () {
-      document.getElementById("datepicker").setAttribute("value", aujourdhui);
-    },
-    components: {
-      Datepicker
+      document.getElementById("date").setAttribute("value", aujourdhui);
     }
   }
   
