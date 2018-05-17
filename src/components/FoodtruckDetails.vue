@@ -6,13 +6,13 @@
           <i class="material-icons buttonReturnText" @click="returnList()">keyboard_backspace</i>
         </button>
       </div>
-      <img :src="this.picture.find(function(a){return a.id == $route.params.id}).url" />
+      <img :src="this.foodtruck.find(function(a){return a.id == $route.params.id}).url" />
     </div>
     <div class="info">
-      <span>{{ this.picture.find(function(a){return a.id == $route.params.id}).info }}</span>
+      <span>{{ this.foodtruck.find(function(a){return a.id == $route.params.id}).info }}</span>
     </div>
     <div class="mdl-grid">
-      <div v-for="menu in this.picture.find(function(a){return a.id == $route.params.id}).menus" v-bind:key="menu.id" class="image-card">
+      <div v-for="menu in this.foodtruck.find(function(a){return a.id == $route.params.id}).menus" v-bind:key="menu.id" class="image-card">
         <span class='foodTruckDetailsMenuIntitule'>
           <i class="material-icons">local_dining</i> {{ menu.intitule }}
         </span>
@@ -50,7 +50,7 @@ export default {
   },
   data () {
     return {
-      'picture': data.pictures // .find(this.props.id)
+      'foodtruck': data.foodtrucks // .find(this.props.id)
     }
   }
 }
