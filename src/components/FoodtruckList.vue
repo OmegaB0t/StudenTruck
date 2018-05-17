@@ -3,9 +3,9 @@
     <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
-        <i class="material-icons">keyboard_arrow_left</i>
+        <i class="material-icons" v-on:click="arrowLeft">keyboard_arrow_left</i>
         <input id="date" type="date" value="">
-        <i class="material-icons">keyboard_arrow_right</i>
+        <i class="material-icons" v-on:click="arrowRight">keyboard_arrow_right</i>
         <div v-for="picture in this.pictures" v-bind:key="picture.id" class="image-card" @click="displayDetails(picture.id)">
           <div class="image-card__picture">
             <img :src="picture.url" />
@@ -32,17 +32,20 @@
 </template>
 <script>
   import data from '../data'
-  let ladate = new Date()
-  if (ladate.getMonth()+1 < 10) {
-
-  }
-  let aujourdhui = ladate.getDate()+"-"+ (((ladate.getMonth()+1) < 10) ? "0"+(ladate.getMonth()+1) : (ladate.getMonth()+1)) +"-"+ladate.getFullYear()
-  
-
+  import constant from '../utils/constant'
+  let date = new Date()
+  let today = date.getFullYear()+"-"+ (((date.getMonth()+1) < 10) ? "0"+(date.getMonth()+1) : (date.getMonth()+1)) +"-"+date.getDate()
   export default {
     methods: {
       displayDetails (id) {
         this.$router.push({name: 'FoodtruckDetails', params: { id: id }})
+      },
+      arrowLeft () {
+        console.log('ok left');
+        
+      },
+      arrowRight () {
+        console.log('ok right');
       }
     },
     data () {
@@ -51,8 +54,7 @@
       }
     },
     mounted () {
-      document.getElementById("date").setAttribute("value", aujourdhui);
-      console.log(document.getElementById("date").getAttribute("value"))
+      document.getElementById("date").setAttribute("value", today);
     }
   }
   
