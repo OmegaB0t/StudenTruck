@@ -12,6 +12,7 @@
           </div>
           <div id="ButtonForgotPassword">
             <button id="submitButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Réinitialiser mon mot de passe </button>
+            <p> <a href="/"> Se connecter </a> </p>
           </div>
         </form>
       </div>
