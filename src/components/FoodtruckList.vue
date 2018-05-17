@@ -6,23 +6,22 @@
         <i class="material-icons" v-on:click="arrowLeft">keyboard_arrow_left</i>
         <input id="date" type="date" value="">
         <i class="material-icons" v-on:click="arrowRight">keyboard_arrow_right</i>
-        <div v-for="picture in this.pictures" v-bind:key="picture.id" class="image-card" @click="displayDetails(picture.id)">
+        <div v-for="foodtruck in this.foodtrucks" v-bind:key="foodtruck.id" class="image-card" @click="displayDetails(foodtruck.id)">
           <div class="image-card__picture">
-            <img :src="picture.url" />
+            <img :src="foodtruck.url" />
           </div>
           <div class="mdl-grid image-card__title mdl-card__actions">
             <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
-              <span>{{ picture.name }}</span>
+              <span>{{ foodtruck.name }}</span>
             </div>
           </div>
           <div class="mdl-grid image-card__comment mdl-card__actions">
             <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone">
               <img class="icon" src="../assets/clock-circular-outline.png">
-              <span>{{ picture.heure }}</span>
+              <span>{{ foodtruck.heure }}</span>
             </div>
             <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone">
               <img class="icon" src="../assets/cart.png">
-              <span>{{ picture.commandes }}/{{ picture.minCommandes }}</span>
             </div>
           </div>
         </div>
@@ -41,16 +40,17 @@
         this.$router.push({name: 'FoodtruckDetails', params: { id: id }})
       },
       arrowLeft () {
-        console.log('ok left');
+        console.log(this.date.setDate(this.date.getDate()-1));
         
       },
       arrowRight () {
-        console.log('ok right');
+        console.log(this.date+1);
       }
     },
     data () {
       return {
-        'pictures': data.pictures,
+        'foodtrucks': data.foodtrucks,
+        'date': date
       }
     },
     mounted () {
