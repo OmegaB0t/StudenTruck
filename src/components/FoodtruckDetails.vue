@@ -2,8 +2,8 @@
   <div>
     <div class="picture">
       <div class="buttonReturn mdl-cell mdl-cell--6-col mdl-cell--4-tablet mdl-cell--2-col-phone">
-        <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
-          <i class="material-icons buttonReturnText" @click="returnList()">keyboard_backspace</i>
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" @click="returnList()">
+          <i class="material-icons buttonReturnText" >keyboard_backspace</i>
         </button>
       </div>
       <img :src="this.picture.find(function(a){return a.id == $route.params.id}).url" />
