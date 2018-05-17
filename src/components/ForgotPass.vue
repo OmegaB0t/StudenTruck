@@ -39,11 +39,15 @@ export default {
 
         var mailRegex = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");  
         
+        var errorMsg = "";
         var wrongMail = (userInputMail.val() == "" || !mailRegex.test(userInputMail.val()));
 
         if(wrongMail) {
+          errorMsg += "Mail invalide \n";
+        }
+        if(errorMsg !== "") {
           e.preventDefault();
-          alert("Rentrez un mail valide !");
+          alert("Erreur : \n" + errorMsg);
         }
       });
     });

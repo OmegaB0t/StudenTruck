@@ -43,18 +43,22 @@ export default {
      
         var userInputMail = $("#mail");
         var userInputPassword = $("#password");
+        
 
         var mailRegex = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");  
         
+        var errorMsg = "";
         var wrongMail = (userInputMail.val() == "" || !mailRegex.test(userInputMail.val()));
 
         if(wrongMail) {
-          e.preventDefault();
-          alert("Rentrez un mail valide !");
+          errorMsg += "Mail invalide \n";
         }
         if (userInputPassword.val().length < 8) {
+          errorMsg +="Votre mot de passe doit faire au moins 8 caractères \n";
+        }
+        if(errorMsg !== "") {
           e.preventDefault();
-          alert("Votre mot de passe doit faire au moins 8 caractères");
+          alert("Erreur : \n" + errorMsg);
         }
       });
     });

@@ -58,6 +58,7 @@ export default {
             var mailRegex = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");  
             var phoneRegex = new RegExp("^(0[1-68])(?:[ _.-]?(\d{2})){4}$");
             
+            var errorMsg = "";
             var wrongMail = (userInputMail == "" || !mailRegex.test(userInputMail));
             var verifMailsInputs = (userInputMail === userInputMailConfirmation);
             var verifPhone = (inputPhone == "" || !phoneRegex.test(inputPhone));
@@ -67,23 +68,20 @@ export default {
             );
             
             if(wrongMail) {
-                e.preventDefault();
-                alert("Rentrez un mail valide !");
-            }
-
+                errorMsg += "Mail invalide \n";
+            }   
             if(!verifMailsInputs) {
-                e.preventDefault();
-                alert("Les mails ne sont pas les mêmes");
+                errorMsg += "Les mails ne sont pas les mêmes \n";
             }
-
             if(verifPhone) {
-                e.preventDefault();
-                alert("Le numéro de téléphone est incorrect");
+                errorMsg += "Le numéro de téléphone est incorrect \n";
             }
-            
             if(!verifSiret) {
+                errorMsg += "Le numéro SIRET est incorrect \n";
+            }
+            if(errorMsg !== "") {
                 e.preventDefault();
-                alert("Le numéro SIRET est incorrect")
+                alert("Erreur : \n" + errorMsg);
             }
         });
     });
