@@ -40,16 +40,17 @@
         this.$router.push({name: 'FoodtruckDetails', params: { id: id }})
       },
       arrowLeft () {
-        console.log('ok left');
+        console.log(this.date.setDate(this.date.getDate()-1));
         
       },
       arrowRight () {
-        console.log('ok right');
+        console.log(this.date+1);
       }
     },
     data () {
       return {
         'foodtrucks': data.foodtrucks,
+        'date': date
       }
     },
     mounted () {
