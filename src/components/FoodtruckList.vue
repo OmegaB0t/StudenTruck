@@ -13,21 +13,20 @@
         
         <div v-for="picture in this.pictures" v-bind:key="picture.id" class="image-card" @click="displayDetails(picture.id)">
           <div class="image-card__picture">
-            <img :src="picture.url" />
+            <img :src="foodtruck.url" />
           </div>
           <div class="mdl-grid image-card__title mdl-card__actions">
             <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
-              <span>{{ picture.name }}</span>
+              <span>{{ foodtruck.name }}</span>
             </div>
           </div>
           <div class="mdl-grid image-card__comment mdl-card__actions">
             <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone">
               <img class="icon" src="../assets/clock-circular-outline.png">
-              <span>{{ picture.heure }}</span>
+              <span>{{ foodtruck.heure }}</span>
             </div>
             <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-phone">
               <img class="icon" src="../assets/cart.png">
-              <span>{{ picture.commandes }}/{{ picture.minCommandes }}</span>
             </div>
           </div>
         </div>
@@ -54,12 +53,12 @@
     },
     data () {
       return {
-        'pictures': data.pictures,
+        'foodtrucks': data.foodtrucks,
+        'date': date
       }
     },
     mounted () {
       document.getElementById("date").setAttribute("value", today);
-      console.log(today);
     }
   }
   

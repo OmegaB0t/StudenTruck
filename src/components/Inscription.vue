@@ -20,7 +20,8 @@
         </div>
         <div id="InscriptionButton">
             <button id="submitButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Inscription </button>
-            <p> Vous avez déjà un compte ? <a href="/connexion"> cliquez ici ! </a> </p>
+            <p> Vous avez déjà un compte ? <a href="/"> cliquez ici ! </a> </p>
+            <a href="/RequeteFoodtruck"> Inscrire mon foodtruck </a>
         </div>
         </form>
       </div>
@@ -50,23 +51,23 @@ export default {
 
         var mailRegex = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");  
         
+        var errorMsg = ""; 
         var wrongMail = (userInputMail == "" || !mailRegex.test(userInputMail));
         var verifMailsInputs = (userInputMail === userInputMailConfirmation);
         
         if(wrongMail) {
-            e.preventDefault();
-            alert("Rentrez un mail valide !");
+            errorMsg += "Mail invalide \n";
         }
-
         if(!verifMailsInputs) {
-            e.preventDefault();
-            alert("Les mails ne sont pas les mêmes");
+            errorMsg += "Les mails ne sont pas les mêmes \n";
         }
         if (userInputPassword.length < 8) {
-            e.preventDefault();
-            alert("Votre mot de passe doit faire au moins 8 caractères");
+            errorMsg += "Votre mot de passe doit faire au moins 8 caractères \n ";
         }
-
+        if(errorMsg !== "") {
+            e.preventDefault();
+            alert("Erreur : \n" + errorMsg);
+        }
       });
     });
   }

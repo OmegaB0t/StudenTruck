@@ -14,12 +14,7 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/index',
-      name: 'Hello',
-      component: Hello
-    },
-    {
-      path: '/connexion',
+      path: '/',
       name: 'Connexion',
       component: Connexion
     },
@@ -29,12 +24,12 @@ export default new Router({
       component: Inscription
     },
     {
-      path: '/RequeteFoodtruck',
+      path: '/requeteFoodtruck',
       name: 'InscriptionFoodtruck',
       component: InscriptionFoodtruck
     },
     {
-      path: '/ForgotPassword',
+      path: '/forgotPassword',
       name: 'ForgotPass',
       component: ForgotPass
     },

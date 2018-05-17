@@ -16,8 +16,8 @@
           </div>
           <div id="connexionInscription">
             <button id="submitButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Connexion </button>
-            <p><a href="/ForgotPassword"> J'ai oublié mon mot de passe ? </a> </p>
-            <p> Pas encore inscrit ? <a href="/Inscription"> cliquez ici ! </a> </p>
+            <p><a href="/forgotPassword"> J'ai oublié mon mot de passe ? </a> </p>
+            <p> Pas encore inscrit ? <a href="/inscription"> cliquez ici ! </a> </p>
           </div>
         </form>
       </div>
@@ -43,18 +43,22 @@ export default {
      
         var userInputMail = $("#mail");
         var userInputPassword = $("#password");
+        
 
         var mailRegex = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");  
         
+        var errorMsg = "";
         var wrongMail = (userInputMail.val() == "" || !mailRegex.test(userInputMail.val()));
 
         if(wrongMail) {
-          e.preventDefault();
-          alert("Rentrez un mail valide !");
+          errorMsg += "Mail invalide \n";
         }
         if (userInputPassword.val().length < 8) {
+          errorMsg +="Votre mot de passe doit faire au moins 8 caractères \n";
+        }
+        if(errorMsg !== "") {
           e.preventDefault();
-          alert("Votre mot de passe doit faire au moins 8 caractères");
+          alert("Erreur : \n" + errorMsg);
         }
       });
     });
