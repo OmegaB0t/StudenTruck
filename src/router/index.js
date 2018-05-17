@@ -14,12 +14,7 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/index',
-      name: 'Hello',
-      component: Hello
-    },
-    {
-      path: '/connexion',
+      path: '/',
       name: 'Connexion',
       component: Connexion
     },

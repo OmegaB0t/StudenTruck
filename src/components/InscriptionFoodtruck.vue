@@ -25,7 +25,7 @@
         <p> Le numéro SIRET servira à vérifier que votre entreprise existe bien </p>
         <div id="AskApprobationButton">
             <button id="submitButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Demande d'approbation </button>
-            <p> Vous avez déjà un compte ? <a href="/connexion"> cliquez ici ! </a> </p>
+            <p> Vous avez déjà un compte ? <a href="/"> cliquez ici ! </a> </p>
         </div>  
         </form>
       </div>
