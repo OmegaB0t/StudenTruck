@@ -3,9 +3,9 @@
     <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
-        <i class="material-icons">keyboard_arrow_left</i>
+        <i class="material-icons" v-on:click="arrowLeft">keyboard_arrow_left</i>
         <input id="date" type="date" value="">
-        <i class="material-icons">keyboard_arrow_right</i>
+        <i class="material-icons" v-on:click="arrowRight">keyboard_arrow_right</i>
         <div v-for="picture in this.pictures" v-bind:key="picture.id" class="image-card" @click="displayDetails(picture.id)">
           <div class="image-card__picture">
             <img :src="picture.url" />
@@ -29,7 +29,7 @@
       </div>
     </div>
   </div>
-</template>  constant.colors.grey
+</template>
 <script>
   import data from '../data'
   import constant from '../utils/constant'
@@ -39,6 +39,12 @@
     methods: {
       displayDetails (id) {
         this.$router.push({name: 'FoodtruckDetails', params: { id: id }})
+      },
+      arrowLeft () {
+        console.log('ok left');
+      },
+      arrowRight () {
+        console.log('ok right');
       }
     },
     data () {
