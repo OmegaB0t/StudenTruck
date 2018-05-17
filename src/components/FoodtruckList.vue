@@ -45,7 +45,7 @@
       },
       arrowRight () {
         console.log('ok right');
-      }
+      },
     },
     data () {
       return {
