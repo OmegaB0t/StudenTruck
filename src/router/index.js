@@ -29,12 +29,12 @@ export default new Router({
       component: Inscription
     },
     {
-      path: '/RequeteFoodtruck',
+      path: '/requeteFoodtruck',
       name: 'InscriptionFoodtruck',
       component: InscriptionFoodtruck
     },
     {
-      path: '/ForgotPassword',
+      path: '/forgotPassword',
       name: 'ForgotPass',
       component: ForgotPass
     },
