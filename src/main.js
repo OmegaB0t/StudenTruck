@@ -3,12 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import firebase from './services/firebase'
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  firebase: {
+    studentruck: firebase.database.ref('studentruck').orderByChild('date')
+  },
   router,
   template: '<App/>',
   components: { App }
