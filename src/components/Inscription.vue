@@ -21,6 +21,7 @@
         <div id="InscriptionButton">
             <button id="submitButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Inscription </button>
             <p> Vous avez déjà un compte ? <a href="/connexion"> cliquez ici ! </a> </p>
+            <a href="/RequeteFoodtruck"> Inscrire mon foodtruck </a>
         </div>
         </form>
       </div>
