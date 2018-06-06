@@ -70,6 +70,7 @@ export default {
 <style>
 
 #container {
+        font-family: 'Oxygen', sans-serif;
         position: relative;
         top: 10vh;
         width:50%;
@@ -78,6 +79,7 @@ export default {
 
 @media screen and (max-width: 600px) {
     #container {
+        font-family: 'Oxygen', sans-serif;
         position: relative;
         top: 10vh;
         width: 100%;
@@ -86,6 +88,7 @@ export default {
 }
 
 #connectionCard {
+    font-family: 'Oxygen', sans-serif;
     min-width: 300px;
     width: auto;
     height: auto;
@@ -93,18 +96,21 @@ export default {
 }
 
 #connexionInscription button, p {
+  font-family: 'Oxygen', sans-serif;
   margin: 10px;
 }
 
 #topCardTitle h2 {
+  font-family: 'Oxygen', sans-serif;
   color: balck;
       text-shadow: 0px 0px 1px white;
 }
 
 #topCardTitle {
+  font-family: 'Oxygen', sans-serif;
   padding:10px;
-  background: url(../assets/MaterialBackground.png);
-  background-image: url(../assets/MaterialBackground.png);
+  background: url(../assets/Bandeau_StudenTruck_1.png);
+  background-image: url(../assets/Bandeau_StudenTruck_1.png);
   background-size: cover;
 }
 
