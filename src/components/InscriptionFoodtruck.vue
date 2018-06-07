@@ -122,8 +122,6 @@ export default {
 
 #topCardTitle {
     padding:10px;
-    background: url(../assets/MaterialBackground.png);
-    background-image: url(../assets/MaterialBackground.png);
     background-size: cover;
 }
 

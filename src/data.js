@@ -48,6 +48,26 @@ export default  {
       "description": "Menu complet pour 6 euros. \nBoisson au choix.",
       "prix": 6
     }]
+  },
+  {
+    "id": 2,
+    "url": "http://www.lepainquotidien.be/wp-content/uploads/sites/12/2016/07/BE-FoodTruck_MainImage.jpg",
+    "name": "Petit Pain",
+    "password": "b3c72v9b73cn",
+    "mail": "lbk35@orange.fr",
+    "heure": "11h35",
+    "dates": [{
+      "date": "2018-05-18",
+      "minCommandes": 10,
+      "commandes": 17
+    }],
+    "menus": [{
+      "id": 4,
+      "url": "https://i2.wp.com/www.kebabandco.fr/wp-content/uploads/2017/03/MENUS-KEBAB.png?fit=1024%2C1024&ssl=1",
+      "intitule": "Kebab frites boisson",
+      "description": "Menu complet pour 6 euros. \nBoisson au choix.",
+      "prix": 6
+    }]
   }],
   "clients": [{
       "id": 1,

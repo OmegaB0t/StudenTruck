@@ -15,8 +15,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
+      name: 'Connexion',
+      component: Connexion
     },
     {
       path: '/inscription',

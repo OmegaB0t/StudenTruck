@@ -1,5 +1,5 @@
 {
-  "name": "studentruck",
+  "name": "Un petit creux ?",
   "short_name": "studentruck",
   "icons": [
     {
@@ -8,13 +8,17 @@
       "type": "image/png"
     },
     {
-      "src": "/static/img/icons/logo_512.png",
+      "src": "/static/img/icons/Logo_StudenTruck_512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#4DBA87"
+
+  "background": {
+    "page": "url(./assets/Bandeau_StudenTruck_1.png)"
+  },
+  "theme_color": "#83D0CA",
+  "background_color": "#83D0CA"
 }
