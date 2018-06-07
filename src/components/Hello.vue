@@ -20,10 +20,12 @@
 </template>
 
 <script>
+import data from '../data'
 export default {
   name: 'hello',
   data () {
     return {
+      'foodtrucks': data.foodtrucks,
       msg: 'Welcome to Your Vue FLORENTI.js PWA'
     }
   }

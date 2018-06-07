@@ -109,8 +109,7 @@ export default {
 #topCardTitle {
   font-family: 'Oxygen', sans-serif;
   padding:10px;
-  background: url(../assets/Bandeau_StudenTruck_1.png);
-  background-image: url(../assets/Bandeau_StudenTruck_1.png);
+  
   background-size: cover;
 }
 
