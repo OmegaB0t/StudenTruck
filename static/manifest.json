@@ -1,5 +1,5 @@
 {
-  "name": "Un petit creux ?",
+  "name": "Réservation de menus",
   "short_name": "studentruck",
   "icons": [
     {
@@ -19,6 +19,6 @@
   "background": {
     "page": "url(./assets/Bandeau_StudenTruck_1.png)"
   },
-  "theme_color": "#83D0CA",
-  "background_color": "#83D0CA"
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF"
 }
