@@ -5,7 +5,7 @@
         <h2 class="mdl-card__title-text">Inscription</h2>
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <form name="InscriptionForm" id="InscriptionForm" action="/Hello" onsubmit="return validateForm()" method="post">
+        <form name="InscriptionForm" id="InscriptionForm" action="/" onsubmit="return validateForm()" method="get">
         <div id="mailInputBox" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" name="mail" type="text" id="mail">
             <label class="mdl-textfield__label" for="mail">Email</label>
