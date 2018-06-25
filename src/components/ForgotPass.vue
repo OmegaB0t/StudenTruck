@@ -5,7 +5,7 @@
         <h2 class="mdl-card__title-text">Mot de passe oublié</h2>
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <form name="connexionForm" id="connexionForm" action="/Hello" onsubmit="return validateForm()" method="post">
+        <form name="connexionForm" id="connexionForm" action="/" onsubmit="return validateForm()" method="get">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" name="mail" type="text" id="mail">
             <label id="labelForMail" class="mdl-textfield__label" for="mail">Email</label>
