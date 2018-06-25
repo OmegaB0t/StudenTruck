@@ -103,7 +103,7 @@ export default {
 
 #topCardTitle h2 {
   font-family: 'Oxygen', sans-serif;
-  color: balck;
+  color: black;
       text-shadow: 0px 0px 1px white;
 }
 
