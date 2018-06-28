@@ -45,10 +45,14 @@
         this.$router.push({name: 'FoodtruckDetails', params: { id: id }})
       },
       arrowLeft () {
-        console.log('ok left');
+        date.setDate(date.getDate() - 1);
+        today = date.getFullYear()+"-"+ (((date.getMonth()+1) < 10) ? "0"+(date.getMonth()+1) : (date.getMonth()+1)) +"-"+date.getDate();
+        document.getElementById("date").setAttribute("value", today);
       },
       arrowRight () {
-        console.log('ok right');
+        date.setDate(date.getDate() + 1);
+        today = date.getFullYear()+"-"+ (((date.getMonth()+1) < 10) ? "0"+(date.getMonth()+1) : (date.getMonth()+1)) +"-"+date.getDate();
+        document.getElementById("date").setAttribute("value")
       },
     },
     data () {
