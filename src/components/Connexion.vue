@@ -5,13 +5,13 @@
         <h2 class="mdl-card__title-text">Connexion</h2>
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <form name="connexionForm" id="connexionForm" action="/Hello" onsubmit="return validateForm()" method="post">
+        <form name="connexionForm" id="connexionForm" action="/FoodTruckList" onsubmit="return validateForm()" method="get">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" name="mail" type="text" id="mail">
             <label id="labelForMail" class="mdl-textfield__label" for="mail">Email</label>
           </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="password" id="password">  
+            <input class="mdl-textfield__input" type="password" id="password">
             <label id="labelForPassword" class="mdl-textfield__label" for="password">Password</label>
           </div>
           <div id="connexionInscription">
@@ -60,6 +60,7 @@ export default {
           e.preventDefault();
           alert("Erreur : \n" + errorMsg);
         }
+
       });
     });
   }
@@ -70,6 +71,7 @@ export default {
 <style>
 
 #container {
+        font-family: 'Oxygen', sans-serif;
         position: relative;
         top: 10vh;
         width:50%;
@@ -78,6 +80,7 @@ export default {
 
 @media screen and (max-width: 600px) {
     #container {
+        font-family: 'Oxygen', sans-serif;
         position: relative;
         top: 10vh;
         width: 100%;
@@ -86,6 +89,7 @@ export default {
 }
 
 #connectionCard {
+    font-family: 'Oxygen', sans-serif;
     min-width: 300px;
     width: auto;
     height: auto;
@@ -93,18 +97,20 @@ export default {
 }
 
 #connexionInscription button, p {
+  font-family: 'Oxygen', sans-serif;
   margin: 10px;
 }
 
 #topCardTitle h2 {
-  color: balck;
+  font-family: 'Oxygen', sans-serif;
+  color: black;
       text-shadow: 0px 0px 1px white;
 }
 
 #topCardTitle {
+  font-family: 'Oxygen', sans-serif;
   padding:10px;
-  background: url(../assets/MaterialBackground.png);
-  background-image: url(../assets/MaterialBackground.png);
+  
   background-size: cover;
 }
 

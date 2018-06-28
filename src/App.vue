@@ -13,8 +13,9 @@
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">Menu</span>
       <nav class="mdl-navigation">
-        <router-link class="mdl-navigation__link" to="/" @click.native="hideMenu">Menu</router-link>
-        <router-link class="mdl-navigation__link" to="/foodtruckList" @click.native="hideMenu">Liste des menus</router-link>
+        <router-link class="mdl-navigation__link" to="/" @click.native="hideMenu">Home</router-link>
+        <router-link class="mdl-navigation__link" to="/foodtruckList" @click.native="hideMenu">FoodtruckList</router-link>
+        <router-link class="mdl-navigation__link" to="/foodtruckAddMenu" @click.native="hideMenu">Ajouter un menu</router-link>
       </nav>
     </div>
   
@@ -45,7 +46,7 @@ const $ = require('jquery')
 </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+  @import url('https://fonts.googleapis.com/css?family=Oxygen');
   @import url('https://code.getmdl.io/1.2.1/material.blue-red.min.css');
 
 body {
@@ -53,27 +54,30 @@ body {
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Oxygen', sans-serif;
   font-size: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  background: url(./assets/Bandeau_StudenTruck_1.png);
 }
 
 main {
+  font-family: 'Oxygen', sans-serif;
   text-align: center;
   margin-top: 0px;
 }
 
 header {
+  font-family: 'Oxygen', sans-serif;
   margin: 0;
   height: 56px;
   padding: 0 16px 0 24px;
-  background-color: #35495E;
+  background: url(./assets/Bandeau_StudenTruck_1.png);
   color: #ffffff;
 }
 
 header span {
+  font-family: 'Oxygen', sans-serif;
   display: block;
   position: relative;
   font-size: 20px;
@@ -85,7 +89,22 @@ header span {
 }
 
 .mdl-layout-title {
+  font-family: 'Oxygen', sans-serif;
   margin-bottom: 10px;
   font-size: 22px;
+}
+
+.mdl-layout__header {
+  background: url(./assets/Bandeau_StudenTruck_1.png);
+}
+
+.mdl-layout__drawer {
+  font-family: 'Oxygen', sans-serif;
+  color: #ffffff;
+  background: url(./assets/Bandeau_StudenTruck_3.png);
+}
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+  font-family: 'Oxygen', sans-serif;
+  color: #ffffff;
 }
 </style>

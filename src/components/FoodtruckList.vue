@@ -11,7 +11,7 @@
           <i class="material-icons" v-on:click="arrowRight">keyboard_arrow_right</i>
         </button>
         
-        <div v-for="picture in this.pictures" v-bind:key="picture.id" class="image-card" @click="displayDetails(picture.id)">
+        <div v-for="foodtruck in this.foodtrucks" v-bind:key="foodtruck.id" class="image-card" @click="displayDetails(foodtruck.id)">
           <div class="image-card__picture">
             <img :src="foodtruck.url" />
           </div>

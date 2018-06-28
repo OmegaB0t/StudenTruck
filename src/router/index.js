@@ -8,6 +8,7 @@ import InscriptionFoodtruck from '@/components/InscriptionFoodtruck'
 import ForgotPass from '@/components/ForgotPass'
 import FoodtruckList from '@/components/FoodtruckList'
 import FoodtruckDetails from '@/components/FoodtruckDetails'
+import FoodtruckAddMenu from '@/components/FoodTruckAddMenu'
 
 Vue.use(Router)
 
@@ -48,6 +49,11 @@ export default new Router({
       path: '/foodtruckDetails/:id',
       name: 'FoodtruckDetails',
       component: FoodtruckDetails
+    },
+    {
+      path: '/foodtruckAddMenu',
+      name: 'FoodtruckAddMenu',
+      component: FoodtruckAddMenu
     }
   ]
 })
