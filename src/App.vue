@@ -6,15 +6,15 @@
       <div class="mdl-layout__header-row">
         <span class="mdl-layout-title">StudenTruck</span>
         <div class="mdl-layout-spacer"></div>
-        <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="1">turned_in</div>
+        <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="1" v-on:click="user">turned_in</div>
       </div>
     </header>
 
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">Menu</span>
       <nav class="mdl-navigation">
-        <router-link class="mdl-navigation__link" to="/" @click.native="hideMenu">Home</router-link>
-        <router-link class="mdl-navigation__link" to="/foodtruckList" @click.native="hideMenu">FoodtruckList</router-link>
+        <router-link class="mdl-navigation__link" to="/" @click.native="hideMenu">Menu</router-link>
+        <router-link class="mdl-navigation__link" to="/foodtruckList" @click.native="hideMenu">Liste des menus</router-link>
       </nav>
     </div>
   
@@ -35,6 +35,9 @@ export default {
     hideMenu: function () {
       document.getElementsByClassName('mdl-layout__drawer')[0].classList.remove('is-visible')
       document.getElementsByClassName('mdl-layout__obfuscator')[0].classList.remove('is-visible')
+    },
+    user : function () {
+      location.href='/user';
     }
   }
 }

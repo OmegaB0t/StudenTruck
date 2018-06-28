@@ -52,7 +52,7 @@
       arrowRight () {
         date.setDate(date.getDate() + 1);
         today = date.getFullYear()+"-"+ (((date.getMonth()+1) < 10) ? "0"+(date.getMonth()+1) : (date.getMonth()+1)) +"-"+date.getDate();
-        document.getElementById("date").setAttribute("value", today);
+        document.getElementById("date").setAttribute("value")
       },
     },
     data () {
