@@ -13,8 +13,8 @@
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">Menu</span>
       <nav class="mdl-navigation">
-        <router-link class="mdl-navigation__link" to="/" @click.native="hideMenu">Home</router-link>
-        <router-link class="mdl-navigation__link" to="/foodtruckList" @click.native="hideMenu">FoodtruckList</router-link>
+        <router-link class="mdl-navigation__link" to="/" @click.native="hideMenu">Accueil</router-link>
+        <router-link class="mdl-navigation__link" to="/foodtruckList" @click.native="hideMenu">Liste des menus</router-link>
         <router-link class="mdl-navigation__link" to="/foodtruckAddMenu" @click.native="hideMenu">Ajouter un menu</router-link>
       </nav>
     </div>

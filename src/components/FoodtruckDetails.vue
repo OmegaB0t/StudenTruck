@@ -25,7 +25,7 @@
         </div>
         <div class="mdl-grid">
           <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-card__actions">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-card__actions" @click="displayMSG()">
               COMMANDER
             </button>
           </div>
@@ -44,6 +44,10 @@ import data from '../data'
 export default {
   // props: ['id']
   methods: {
+    displayMSG () {
+      alert("Commande effectuée")
+      location.href='/user';
+    },
     returnList () {
       this.$router.push({name: 'FoodtruckList'})
     }
