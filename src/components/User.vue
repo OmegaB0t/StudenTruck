@@ -6,9 +6,9 @@
     </div>
     <div class="mdl-card__actions mdl-card--border">
         <h4>Notifications</h4>
-        <li> La commande de FoodTruckMaster a été annulée suite à un manque de commande </li>
+        <li>02/07/2017 La livraison de FoodTruckMaster a été annulée suite à un manque de commande </li>
         <h4>Historique</h4>
-        <li> Commande du 6 mars 2018 <a href="/">détail</a></li>
+        <li> Commande du 08 mars 2018 <a v-on:click="detail">détail</a></li>
     </div>
 </div>
 
@@ -18,7 +18,16 @@
 </template>
 
 <script>
-
+require('material-design-lite')
+export default {
+  name: 'app',
+  methods: {
+    detail : function () {
+      location.href='/detail';
+    }
+  }
+}
+const $ = require('jquery')
 </script>
 
 <style scoped>
