@@ -15,6 +15,7 @@
       <nav class="mdl-navigation">
         <router-link class="mdl-navigation__link" to="/" @click.native="hideMenu">Home</router-link>
         <router-link class="mdl-navigation__link" to="/foodtruckList" @click.native="hideMenu">FoodtruckList</router-link>
+        <router-link class="mdl-navigation__link" to="/foodtruckAddMenu" @click.native="hideMenu">Ajouter un menu</router-link>
       </nav>
     </div>
   
