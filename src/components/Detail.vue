@@ -3,11 +3,11 @@
     <div class="mdl-grid">
       <div class="image-card">
         <span class='foodTruckDetailsMenuIntitule'>
-          <i class="material-icons">local_dining</i> Hamburger frites 4$
+          <i class="material-icons">local_dining</i> Hamburger frites 4 €
         </span>
         <br>
         <span class='foodTruckDetailsMenuDesc'>
-          Commander le 08 mars 2018
+          Commande du 08 mars 2018
         </span>
         <div class="imgMenuParent">
           <img class="imgMenu" src="https://vgy.me/4HXzrf.jpg" />

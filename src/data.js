@@ -19,13 +19,13 @@ export default  {
       "id": 1,
       "url": "https://vgy.me/4HXzrf.jpg",
       "intitule": "Hamburger frites",
-      "description": "Un delicieux sandwitch chaud compose d\"un steak, de tranches de cheddar, de salade et de tomates, accompagne de frites croustillantes.",
+      "description": "Un délicieux sandwich chaud composé d\"un steak, de tranches de cheddar, de salade et de tomates, accompagné de frites croustillantes.",
       "prix": 4
     }, {
       "id": 2,
       "url": "https://vgy.me/17M10z.png",
       "intitule": "Salade de pates",
-      "description": "Une salade de pates fraiches, accompagnee de tomates, de crevettes et de salade.",
+      "description": "Une salade de pates fraiches, accompagnée de tomates, de crevettes et de salade.",
       "prix": 2
     }]
   },

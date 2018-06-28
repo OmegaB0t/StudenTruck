@@ -101,10 +101,11 @@ header span {
 .mdl-layout__drawer {
   font-family: 'Oxygen', sans-serif;
   color: #ffffff;
-  background: url(./assets/Bandeau_StudenTruck_3.png);
+  background-color: #2A3560;
 }
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
   font-family: 'Oxygen', sans-serif;
   color: #ffffff;
+  font-size: 22px;
 }
 </style>

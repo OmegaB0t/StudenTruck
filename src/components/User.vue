@@ -2,13 +2,13 @@
 <div id="container">
 <div id="connectionCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
     <div id="topCardTitle" class="mdl-card__title">
-        <h2 class="mdl-card__title-text"><img src="/static/img/icons/logo_192.png" alt="Logo" widht= "45" height = "45">Mr Test</h2>
+        <h2 class="mdl-card__title-text"><img src="/static/img/icons/logo_144.png" alt="Logo" widht= "60" height = "60">M.Test</h2>
     </div>
     <div class="mdl-card__actions mdl-card--border">
         <h4>Notifications</h4>
-        <li>02/07/2017 La livraison de FoodTruckMaster a été annulée suite à un manque de commande </li>
+        <li>02/07/2017 La livraison de FoodTruckMaster a été annulée suite à un manque de commandes </li>
         <h4>Historique</h4>
-        <li> Commande du 08 mars 2018 <a v-on:click="detail">détail</a></li>
+        <li> Commandé le 08 mars 2018 <a v-on:click="detail">détail</a></li>
     </div>
 </div>
 

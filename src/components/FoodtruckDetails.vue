@@ -30,7 +30,7 @@
             </button>
           </div>
           <div class="foodTruckDetailsMenuPrix mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
-            {{ menu.prix }} $
+            {{ menu.prix }} €
           </div>
         </div>
         <br>
